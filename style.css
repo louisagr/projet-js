@@ -34,3 +34,10 @@
   margin-left: -0.5em;
   margin-bottom: -0.5em;
 }
+.todo {
+  text-align: center;
+}
+.list {
+  list-style: none;
+  text-align: center;
+}

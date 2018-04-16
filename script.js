@@ -1,3 +1,4 @@
+// HORLOGE NUMERIQUE
 var d, h, m, s, animate;
 
 function init() {
@@ -35,3 +36,26 @@ function $(id, val) {
 };
 
 window.onload = init;
+// TO-DO LIST
+var button = document.getElementById("enter"),
+    ul = document.querySelector("ul"),
+    input = document.getElementById("user-input"),
+  inputLength = function() {
+    return input.value.length
+  },
+  createListElement = function() {
+    li = document.createElement("li");
+    li.appendChild(document.createTextNode(input.value));
+    ul.appendChild(li);
+  }
+button.addEventListener("click", function() {
+  if (inputLength() > 0) {
+    createListElement()
+  }
+})
+input.addEventListener("keypress", function(event) {
+  if (inputLength() > 0 && event.keyCode === 13) {
+    var li = document.createElement("li");
+    createListElement()
+  }
+})
