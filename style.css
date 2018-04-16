@@ -1,0 +1,36 @@
+.title h1 {
+  text-align: center;
+}
+
+.buffer {
+  border: 1px solid #fff;
+}
+
+.clockjs {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.clock h4 {
+  text-align: center;
+  color: #fff;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #000000;
+  border-radius: .4em;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 0.5em solid transparent;
+  border-top-color: #000000;
+  border-bottom: 0;
+  margin-left: -0.5em;
+  margin-bottom: -0.5em;
+}
