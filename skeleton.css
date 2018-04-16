@@ -287,7 +287,9 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: none;
+  text-align: center;
+}
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -301,7 +303,9 @@ ol ul {
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
-
+li:hover {
+  text-decoration:line-through;
+}
 
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

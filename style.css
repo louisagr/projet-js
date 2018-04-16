@@ -12,18 +12,18 @@
   text-align: center;
 }
 
-.clock h4 {
+h5 {
   text-align: center;
   color: #fff;
 }
 
-.speech-bubble {
+.speech-bubble1 {
   position: relative;
   background: #000000;
   border-radius: .4em;
 }
 
-.speech-bubble:after {
+.speech-bubble1:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -34,10 +34,34 @@
   margin-left: -0.5em;
   margin-bottom: -0.5em;
 }
+
 .todo {
   text-align: center;
 }
+
 .list {
   list-style: none;
   text-align: center;
+}
+
+.speech-bubble2 {
+  position: relative;
+  background: #000000;
+  border-radius: .4em;
+  width: 100%;
+}
+
+.speech-bubble2:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 0.5em solid transparent;
+  border-left-color: #000000;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -0.5em;
+  margin-right: -0.5em;
 }

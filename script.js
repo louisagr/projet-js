@@ -37,6 +37,9 @@ function $(id, val) {
 
 window.onload = init;
 // TO-DO LIST
+function removeItem(item) {
+  item.target.parentElement.removeChild(item.target);
+}
 var button = document.getElementById("enter"),
     ul = document.querySelector("ul"),
     input = document.getElementById("user-input"),
@@ -47,6 +50,7 @@ var button = document.getElementById("enter"),
     li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
+    li.onclick = removeItem;
   }
 button.addEventListener("click", function() {
   if (inputLength() > 0) {
