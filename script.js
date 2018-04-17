@@ -63,4 +63,21 @@ input.addEventListener("keypress", function(event) {
     createListElement()
   }
 })
-// PIERRE FEUILLE CISEAUX
+// GIPHY API
+/*
+var api = "http://api.giphy.com/v1/gifs/search?";
+var apiKey = "&api_key=hJToyBK6KEAlxrrBVe7oU7NX2l0wIaz0";
+var query = "&q=cat&limit=3";
+
+function setup() {
+  noCanvas();
+  var url = api + apiKey + query;
+  loadJSON(url, gotData);
+}
+function gotData(data) {
+  println(data.data[0].images.original.url);
+}
+function draw() {
+
+}
+*/

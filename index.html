@@ -123,33 +123,35 @@
     <!-- STYLE DES DINOSAURES -->
     <div class="row">
       <div class="three columns buffer">
-        <button type="button" onclick="document.getElementById('ascii').style.color = 'red'">
+        <button type="button" onmouseover="document.getElementById('ascii').style.color = 'red'" disabled>
         Rouge</button>
-        <button type="button" onclick="document.getElementById('ascii').style.color = 'green'">
+        <button type="button" onmouseover="document.getElementById('ascii').style.color = 'green'" disabled>
         Vert</button>
       </div>
       <div class="six columns">
         <h5 class="speech-bubble4">Dinosaures<br>magiques</h5>
       </div>
       <div class="three columns buffer">
-        <button type="button" onclick="document.getElementById('ascii').style.color = 'blue'">
+        <button type="button" onmouseover="document.getElementById('ascii').style.color = 'blue'" disabled>
         Bleu</button>
-        <button type="button" onclick="document.getElementById('ascii').style.color = 'black'">
+        <button type="button" onmouseover="document.getElementById('ascii').style.color = 'black'" disabled>
         Noir</button>
       </div>
     </div>
     <hr>
-    <!-- PIERRE FEUILLE CISEAUX -->
+    <!-- GIPHY API -->
     <div class="row">
-      <div class="twelve columns">
-        <h1>Choisis ton arme</h1>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <p></p>
+      <div class ="two columns buffer">
+      </div>
+      <div class="eight columns">
+        <input type="search" name="q">
+        <button>Rechercher</button>
+      </div>
+      <div class="two columns buffer">
       </div>
     </div>
   </div>
 </body>
 <script src="script.js"></script>
+<script src="p5.min.js"></script>
 </html>
