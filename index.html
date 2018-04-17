@@ -52,11 +52,44 @@
     <hr>
     <!-- CALCULATRICE -->
     <div class="row">
-      <div class="ten columns calc">
+      <div class="five columns">
+        <form name="calc">
+          <table>
+            <input type="text" name="display" id="display" disabled>
+            <tr>
+              <td><input type="button" name="one" value="1" onclick="calc.display.value += '1'"></td>
+              <td><input type="button" name="two" value="2" onclick="calc.display.value += '2'"></td>
+              <td><input type="button" name="three" value="3" onclick="calc.display.value += '3'"></td>
+              <td><input type="button" class="operator" name="plus" value="+" onclick="calc.display.value += '+'"></td>
+            </tr>
+            <tr>
+              <td><input type="button" name="four" value="4" onclick="calc.display.value += '4'"></td>
+              <td><input type="button" name="five" value="5" onclick="calc.display.value += '5'"></td>
+              <td><input type="button" name="six" value="6" onclick="calc.display.value += '6'"></td>
+              <td><input type="button" class="operator" id="minus" name="minus" value="-" onclick="calc.display.value += '-'"></td>
+            </tr>
+            <tr>
+              <td><input type="button" name="seven" value="7" onclick="calc.display.value += '7'"></td>
+              <td><input type="button" name="eight" value="8" onclick="calc.display.value += '8'"></td>
+              <td><input type="button" name="nine" value="9" onclick="calc.display.value += '9'"></td>
+              <td><input type="button" class="operator" name="times" value="*" onclick="calc.display.value += '*'"></td>
+            </tr>
+            <tr>
+              <td><input type="button" id="clear" name="clear" value="C" onclick="calc.display.value = ''"></td>
+              <td><input type="button" name="zero" value="0" onclick="calc.display.value += '0'"></td>
+              <td><input type="button" name="doit" value="=" onclick="calc.display.value = eval(calc.display.value)"></td>
+              <td><input type="button" class="operator" name="divide" value="/" onclick="calc.display.value += '/'"></td>
+            </tr>
+          </table>
+        </form>
       </div>
-      <div class="two columns buffer">
+      <div class="four columns buffer">
+        <h5 class="speech-bubble3">Calculatrice<br>simple</h5>
+      </div>
+      <div class="three columns buffer">
       </div>
     </div>
+    <hr>
   </div>
 </body>
 <script src="script.js"></script>

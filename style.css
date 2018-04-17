@@ -1,3 +1,4 @@
+/* GENERAL */
 .title h1 {
   text-align: center;
 }
@@ -5,24 +6,16 @@
 .buffer {
   border: 1px solid #fff;
 }
-
-.clockjs {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3em;
-  text-align: center;
-}
-
+/* BULLES DE DIALOGUE */
 h5 {
   text-align: center;
   color: #fff;
 }
-
 .speech-bubble1 {
   position: relative;
   background: #000000;
   border-radius: .4em;
 }
-
 .speech-bubble1:after {
   content: '';
   position: absolute;
@@ -34,23 +27,12 @@ h5 {
   margin-left: -0.5em;
   margin-bottom: -0.5em;
 }
-
-.todo {
-  text-align: center;
-}
-
-.list {
-  list-style: none;
-  text-align: center;
-}
-
 .speech-bubble2 {
   position: relative;
   background: #000000;
   border-radius: .4em;
   width: 100%;
 }
-
 .speech-bubble2:after {
   content: '';
   position: absolute;
@@ -64,4 +46,45 @@ h5 {
   border-top: 0;
   margin-top: -0.5em;
   margin-right: -0.5em;
+}
+.speech-bubble3 {
+  position: relative;
+  background: #000000;
+  border-radius: .4em;
+}
+.speech-bubble3:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 0.625em solid transparent;
+  border-right-color: #000000;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -0.312em;
+  margin-left: -0.625em;
+}
+/* HORLOGE */
+.clockjs {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+/* TO-DO LIST */
+.todo {
+  text-align: center;
+}
+.list {
+  list-style: none;
+  text-align: center;
+}
+/* CALCULATRICE */
+#minus {
+  font-size: 11.5px;
+}
+#display {
+  text-align: right;
+  color: #000;
 }
