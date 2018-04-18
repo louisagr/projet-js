@@ -96,6 +96,27 @@ h5 {
   margin-top: -0.625em;
 }
 
+.speech-bubble5 {
+  position: relative;
+  background: #000000;
+  border-radius: .4em;
+}
+
+.speech-bubble5:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 0.75em solid transparent;
+  border-left-color: #000000;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -0.375em;
+  margin-right: -0.75em;
+}
+
 /* HORLOGE */
 
 .clockjs {
@@ -134,4 +155,72 @@ h5 {
   font-weight: bold;
   white-space: pre;
 }
-/* GIPHY API */
+
+/* SLIDER */
+
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  pasing: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
