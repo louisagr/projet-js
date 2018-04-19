@@ -155,7 +155,13 @@ h5 {
   list-style: none;
   text-align: center;
 }
-
+#user-input {
+  padding: 0.5em 0.5em;
+}
+#user-input:focus,
+#user-input:active {
+  border-color: black;
+}
 /* CALCULATRICE */
 
 #minus {
@@ -176,8 +182,8 @@ h5 {
   white-space: pre;
 }
 
-.btns {
-  text-align: center:
+#btn:hover {
+  cursor: default;
 }
 /* SLIDER */
 
@@ -211,7 +217,7 @@ h5 {
 }
 
 .prev:hover, .next:hover {
-  color: #fff;
+  color: #000;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
