@@ -41,8 +41,8 @@ function removeItem(item) {
   item.target.parentElement.removeChild(item.target);
 }
 var button = document.getElementById("enter"),
-    ul = document.querySelector("ul"),
-    input = document.getElementById("user-input"),
+  ul = document.querySelector("ul"),
+  input = document.getElementById("user-input"),
   inputLength = function() {
     return input.value.length
   },
@@ -84,23 +84,87 @@ function draw() {
 // SLIDER
 var slideIndex = 1;
 showSlides(slideIndex);
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
 }
+// PIERRE FEUILLE CISEAUX
+var score = 0;
+var playerChoice;
+
+var readable = {
+  "0": "Pierre",
+  "1": "Feuille",
+  "2": "Ciseaux"
+};
+/* console.log("cpuChoice", cpuChoice);*/
+var cpuChoice = {
+  init: function() {
+    this.store = Math.floor(Math.random() * 3);
+    this.text = readable[this.store];
+  },
+  store: "",
+  text: ""
+};
+
+var order = [0, 1, 2, 0];
+
+var chooseWinner = function(player, cpu) {
+  if (order[player] === order[cpu]) {
+    return "Match nul !";
+  }
+  if (order[player] === order[cpu + 1]) {
+    score++;
+    return "Gagné !";
+  } else {
+    score--;
+    return "Perdu !";
+  }
+}
+
+var paragraph = document.querySelector("p");
+var assignClick = function(tag, pos) {
+  tag.addEventListener("click", function() {
+    playerChoice = pos;
+    cpuChoice.init();
+    paragraph.innerText = "L'ordinateur a choisi " + cpuChoice.text;
+    paragraph.innerText += "\n" + chooseWinner(playerChoice, cpuChoice.store);
+    paragraph.innerText += "\n" + "Score : " + score;
+  });
+}
+var images = {
+  tags: document.getElementsByClassName("pfc"),
+  init: function() {
+    for(var step = 0; step < this.tags.length; step++) {
+      assignClick(this.tags[step], step);
+    }
+  }
+};
+images.init();
+/*
+cpuChoice.init();
+console.log("cpuchoice:", cpuChoice.store, cpuChoice.text);
+*/
