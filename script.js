@@ -155,7 +155,7 @@ console.log("cpuchoice:", cpuChoice.store, cpuChoice.text);
 
 // GIPHY API
 
-var api = "http://api.giphy.com/v1/gifs/search?";
+var api = "https://api.giphy.com/v1/gifs/search?";
 var apiKey = "&api_key=hJToyBK6KEAlxrrBVe7oU7NX2l0wIaz0";
 var query = "&q=+";
 var input;
