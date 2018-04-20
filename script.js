@@ -177,7 +177,7 @@ function createUrl() {
   console.log(url);
 }
 function gotData(giphy) {
-  for (var i = 0; i < 7; i++)
-  var img = createImg(giphy.data[i].images.fixed_height.url);
+  for (var i = 0; i < 15; i++)
+  var img = createImg(giphy.data[i].images.original.url);
   img.parent("gifs");
 }

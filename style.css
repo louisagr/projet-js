@@ -137,6 +137,26 @@ h5 {
   margin-bottom: -0.625em;
 }
 
+.speech-bubble7 {
+  position: relative;
+  background: #000000;
+  border-radius: .4em;
+}
+
+.speech-bubble7:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 0.625em solid transparent;
+  border-bottom-color: #000000;
+  border-top: 0;
+  margin-left: -0.625em;
+  margin-top: -0.625em;
+}
+
 /* HORLOGE */
 
 .clockjs {
@@ -155,13 +175,15 @@ h5 {
   list-style: none;
   text-align: center;
 }
+
 #user-input {
   padding: 0.5em 0.5em;
 }
-#user-input:focus,
-#user-input:active {
+
+#user-input:focus, #user-input:active {
   border-color: black;
 }
+
 /* CALCULATRICE */
 
 #minus {
@@ -185,6 +207,7 @@ h5 {
 #btn:hover {
   cursor: default;
 }
+
 /* SLIDER */
 
 .slideshow {
@@ -268,4 +291,12 @@ h5 {
 
 .result {
   text-align: center;
+}
+#search {
+  padding: 0.5em 0.5em;
+}
+
+#search:focus,
+#search:active {
+  border-color: black;
 }
