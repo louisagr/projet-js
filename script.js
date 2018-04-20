@@ -173,7 +173,7 @@ function createUrl() {
   input = select("#search").value();
   url = api + query + input + apiKey;
   removeElements();
-  loadJSON(url, gotData, 'jsonp');
+  loadJSON(url, gotData);
   console.log(url);
 }
 function gotData(giphy) {
