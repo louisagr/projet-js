@@ -63,24 +63,7 @@ input.addEventListener("keypress", function(event) {
     createListElement()
   }
 })
-// GIPHY API
-/*
-var api = "http://api.giphy.com/v1/gifs/search?";
-var apiKey = "&api_key=hJToyBK6KEAlxrrBVe7oU7NX2l0wIaz0";
-var query = "&q=cat&limit=3";
 
-function setup() {
-  noCanvas();
-  var url = api + apiKey + query;
-  loadJSON(url, gotData);
-}
-function gotData(data) {
-  println(data.data[0].images.original.url);
-}
-function draw() {
-
-}
-*/
 // SLIDER
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -168,3 +151,33 @@ images.init();
 cpuChoice.init();
 console.log("cpuchoice:", cpuChoice.store, cpuChoice.text);
 */
+
+
+// GIPHY API
+
+var api = "http://api.giphy.com/v1/gifs/search?";
+var apiKey = "&api_key=hJToyBK6KEAlxrrBVe7oU7NX2l0wIaz0";
+var query = "&q=+";
+var input;
+var url;
+
+function setup() {
+  noCanvas();
+  var button = select("#submit");
+  button.mousePressed(createUrl);
+//  var url = api + apiKey + query;
+//  loadJSON(url, gotData);
+}
+
+function createUrl() {
+  input = select("#search").value();
+  url = api + query + input + apiKey;
+  removeElements();
+  loadJSON(url, gotData);
+  console.log(url);
+}
+function gotData(giphy) {
+  for (var i = 0; i < 7; i++)
+  var img = createImg(giphy.data[i].images.fixed_height.url);
+  img.parent("gifs");
+}
